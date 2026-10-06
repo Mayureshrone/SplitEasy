@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SplitEasy</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+    <div class="logo">
+        <a href="/index.html">
+            <img src="/images/logo.png" alt="SplitEasy Logo">
+       </a>
+        <h2>Split<span>Easy</span></h2>
+      
+    </div>
+
+    <div class="header-actions">
+
+        <button
+            class="header-calculate"
+            id="headerCalculate"
+        >
+            Calculate Split
+        </button>
+
+        <button
+            class="header-login"
+            id="loginBtn"
+        >
+
+        <a href="/login.html">Login</a>
+            
+        </button>
+
+        <button
+            class="header-signup"
+            id="signupBtn"
+        >
+        <a href="signup.html">Signup</a>
+        </button>
+
+        
+
+    </div>
+
+</header>
+
+
+    <!-- Main -->
+    <main>
+
+        <!-- Hero -->
+        <section class="hero">
+
+            <div class="hero-text">
+
+                <p class="small-title">EXPENSE SPLITTER</p>
+
+                <h1>
+                    Split expenses
+                    <span>easily.</span>
+                </h1>
+
+               
+
+                <button id="heroCalculate">
+                    Start Calculating
+                </button>
+
+            </div>
+
+
+           
+
+        </section>
+
+
+        <!-- Calculator -->
+        <section class="calculator" id="calculator">
+
+            <div class="section-title">
+                <p class="small-title">CALCULATOR</p>
+
+                <h2>Split an Expense</h2>
+
+                <p>
+                    Enter the total expense and payment details.
+                </p>
+            </div>
+
+
+            <div class="calculator-container">
+
+                <!-- Left Card -->
+                <div class="card">
+
+                    <h3>Expense Details</h3>
+
+                    <label for="totalAmount">
+                        Total Expense
+                    </label>
+
+                    <div class="amount-box">
+                        <span>₹</span>
+
+                        <input
+                            type="number"
+                            id="totalAmount"
+                            placeholder="Enter total amount"
+                            min="0"
+                            step="0.01"
+                        >
+                    </div>
+
+
+                    <!-- People -->
+                    <div class="people-header">
+
+                        <div>
+                            <h3>People</h3>
+
+                            <p>
+                                Add everyone involved.
+                            </p>
+                        </div>
+
+                        <button
+                            class="add-button"
+                            id="addPerson"
+                        >
+                            + Add Person
+                        </button>
+
+                    </div>
+
+
+                    <div id="peopleList">
+
+                    </div>
+
+
+                    <button
+                        class="calculate-button"
+                        id="calculateBtn"
+                    >
+                        Calculate Split
+                    </button>
+
+
+                    <button
+                        class="clear-button"
+                        id="resetBtn"
+                    >
+                        Clear
+                    </button>
+
+                </div>
+
+
+                <!-- Right Card -->
+                <div class="card result-card" id="resultCard">
+
+                    <!-- Before calculation -->
+                    <div id="resultEmpty">
+
+                       <img src="/images/calc-result.png" alt="Result Empty">
+
+                        <h3>Your Result Will Appear Here</h3>
+
+                        <p>
+                            Enter the expense details and
+                            click Calculate Split.
+                        </p>
+
+                    </div>
+
+
+                    <!-- After calculation -->
+                    <div id="resultContent" class="hidden">
+
+                        <div class="result-header">
+
+                            <div>
+                                <p class="small-title">
+                                    RESULT
+                                </p>
+
+                                <h3>Split Summary</h3>
+                            </div>
+
+                            <span id="shareAmount">
+                                ₹0 each
+                            </span>
+
+                        </div>
+
+
+                        <!-- Summary -->
+                        <div class="summary">
+
+                            <div>
+                                <p>Total</p>
+                                <strong id="resultTotal">
+                                    ₹0
+                                </strong>
+                            </div>
+
+                            <div>
+                                <p>People</p>
+                                <strong id="resultPeople">
+                                    0
+                                </strong>
+                            </div>
+
+                            <div>
+                                <p>Each Person</p>
+                                <strong id="resultShare">
+                                    ₹0
+                                </strong>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Individual Balances -->
+                        <h4>Individual Balance</h4>
+
+                        <div id="balanceList">
+
+                        </div>
+
+
+                        <!-- Settlement -->
+                        <div class="settlement">
+
+                            <div class="settlement-title">
+
+                                <h4>Settlement</h4>
+
+                                <span>
+                                    Who pays whom
+                                </span>
+
+                            </div>
+
+                            <div id="settlementList">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Simple Information -->
+        <section class="info">
+
+            <h2>Simple. Fast. Private.</h2>
+
+            <p>
+                SplitEasy does not save your expenses.
+                Everything is calculated directly in your browser.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 SplitEasy</p>
+        <p>Simple Expense Splitter</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
